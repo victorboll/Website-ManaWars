@@ -1,0 +1,130 @@
+
+
+/* Main */
+
+.section-title {
+    font-size: 4rem;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+#portfolio{
+    background-color: papayawhip;
+}
+
+#portfolio .portfolio{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+#portfolio .portfolio-header h1{
+    margin-bottom: 50px;
+    padding-top: 10px;
+}
+#portfolio .all-projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#portfolio .project-item{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#portfolio .project-info {
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+
+#portfolio .project-info h1{
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+#portfolio .project-info h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+
+#portfolio .project-imagem, #portfolio .project-img {
+    flex-basis: 50%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.About {background-image: linear-gradient(60deg, gray 0%, darkgray 100%);}
+.Thea {background-image: linear-gradient(-60deg, skyblue 0%, steelblue 100%);}
+.Yoanis {background-image: linear-gradient(-60deg, darkolivegreen 0%, mediumseagreen 100%);}
+.Zauber {background-image: linear-gradient(-60deg, burlywood 0%, darkkhaki 100%);}
+.Hong {background-image: linear-gradient(-60deg, indianred 0%, Salmon 100%);}
+.Sophia {background-image: linear-gradient(60deg, palevioletred 0%, plum 100%);}
+
+
+/* Mudanças para aplicação de zoom nas imagens dos personagens */
+
+#portfolio .project-img:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+
+}
+
+#portfolio .project-img img{
+    transition: 0.5s ease transform;
+}
+
+#portfolio .project-item:hover .project-img img{
+    transform: scale(1.5);
+}
+
+
+
+
+
+/* Media Query */
+
+@media only screen and (min-width: 768px) {
+    #portfolio .project-item {
+        flex-direction: row;
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+    #portfolio .all-projects .project-info{
+        height: 100%
+    }
+    #portfolio .all-projects .project-img{
+        height: 100%
+    }
+     #portfolio .project-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+
+}
